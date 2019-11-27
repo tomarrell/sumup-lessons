@@ -41,6 +41,8 @@ Done!
 mkdir ~/go && echo "export GOPATH=\"$HOME/go\"" >> ~/.bashrc;
 ```
 
+Done!
+
 # Further Resources
 If you would like to prepare a little ahead of time, definitely check out the tour of Go. It provides a great introduction to the language in a nice, interactive way.
 
