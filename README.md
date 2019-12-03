@@ -7,6 +7,7 @@ Sessions are hosted every **Monday** from **6:00pm to 7:30pm** at SumUp, Gruners
 ### Pages
 
 1. Intro: [./1-intro.md](./1-intro.md)
+2. Lesson 1: [slides](./2019-12-02/intro.pdf)
 
 ### Useful links
 
