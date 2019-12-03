@@ -2,7 +2,7 @@
 
 Welcome to the docs for the Golang lessons hosted at SumUp. Here you will find all the relevant information that we've covered during the sessions.
 
-Sessions are hosted every **Monday** from **6:00pm to 7:30pm** at SumUp, Grunerstrasse 13. In the Everest meeting room.
+Sessions are hosted every **Monday** from **6:15pm to 7:45pm** at SumUp, Grunerstrasse 13. In the Everest meeting room.
 
 ### Pages
 
