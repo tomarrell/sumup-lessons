@@ -7,7 +7,8 @@ Sessions are hosted every **Monday** from **6:15pm to 7:45pm** at SumUp, Gruners
 ### Pages
 
 1. Intro: [./1-intro.md](./1-intro.md)
-2. 2019-12-02 - Lesson 1: [slides](./2019-12-02/intro.pdf)
+2. 2019-12-02 - Lesson 1: intro to programming [slides](./2019-12-02/intro.pdf)
+2. 2019-12-09 - Lesson 2: control structures [slides](./2019-12-02/out.pdf)
 
 ### Useful links
 
