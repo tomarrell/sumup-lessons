@@ -2,6 +2,8 @@
 % Tom Arrell
 % December 9, 2019
 
+![SumUp Gopher](../sumup-gopher.png){width=180 height=180}
+
 ---
 
 # Recap...
