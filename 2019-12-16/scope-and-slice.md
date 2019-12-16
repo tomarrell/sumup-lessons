@@ -1,4 +1,4 @@
-% Scope
+% Scopes and Slices
 % Tom Arrell
 % December 16
 
