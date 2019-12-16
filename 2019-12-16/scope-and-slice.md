@@ -239,3 +239,44 @@ func main() {
 }
 
 ```
+
+---
+
+# Challenge #2
+
+We run a pizza shop, and we have a program which automatically calculates the total price of an order.
+
+Given a (Go) slice of pizzas in an order, return the total price of the order.
+
+- Pepperoni  = $6.00
+- Mozzarella = $5.00
+- Vege       = $5.50
+
+---
+
+```go
+...
+
+func orderPrice(pizzas []string) int {
+  // TODO
+}
+
+func main() {
+  total := orderPrice([]string{
+    "pepperoni", 
+    "mozzarella", 
+    "vege", 
+    "vege",
+  })
+
+  fmt.Println(total)
+}
+```
+
+---
+
+*lesson 3, fin*
+
+If you had any trouble, now is the time to ask for help!
+
+**Questions?**
