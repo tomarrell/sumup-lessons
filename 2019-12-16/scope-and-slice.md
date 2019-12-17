@@ -34,7 +34,7 @@ Scope defines the area of visibility within the program of variables and functio
 ```go
 a := 1
 {
-  a := 2
+  b := 2
   fmt.Println(a)
 }
 fmt.Println(a, b)
@@ -58,7 +58,7 @@ There are two primary scopes in Golang.
 
 :::incremental
 - Global: variables defined here are accessible anywhere within the package that they were defined
-- Local: variables defined here and only accessible within their own *block* and below.
+- Local: variables defined here are only accessible within their own *block* and below.
 :::
 
 ---
@@ -95,7 +95,7 @@ They are able to read from and write to the variables that they have access to.
 
 Shadowing is the term for when you redeclare a variable in a lower scope that is *already* declared in an outer scope.
 
-This is sometimes useful for prevening lower scopes from having access to said variable.
+This is sometimes useful for preventing lower scopes from having access to said variable.
 
 ---
 
@@ -147,9 +147,9 @@ Slices are *most* common in practice, as they are less bug prone. We will contin
 
 To create a slice in Go, you use one of the following syntaxes:
 
-```
+```go
 var := []type{}
-var := make([]type, cap, len)
+var := make([]type, len, cap)
 ```
 
 Both of which will create an empty slice, ready to put data into.
@@ -242,6 +242,49 @@ func main() {
 
 ---
 
+# Solution 1
+
+```go
+var input = []int{1, 2, 3, 4, 5}
+
+func double(numbers []int) []int {
+  for i, _ := range numbers {
+    numbers[i] = numbers[i] * 2
+  }
+  return numbers
+}
+
+func main() {
+  out := double(input)
+  fmt.Println(out)
+}
+```
+
+---
+
+# Solution 2
+
+```go
+var input = []int{1, 2, 3, 4, 5}
+
+func double(numbers []int) []int {
+  newNums := make([]int, 0)
+
+  for _, v := range numbers {
+    newNums = append(newNums, v*2)
+  }
+
+  return newNums
+}
+
+func main() {
+  out := double(input)
+  fmt.Println(out)
+}
+```
+
+---
+
 # Challenge #2
 
 We run a pizza shop, and we have a program which automatically calculates the total price of an order.
@@ -254,12 +297,58 @@ Given a (Go) slice of pizzas in an order, return the total price of the order.
 
 ---
 
+# Challenge #2
+
 ```go
 ...
 
 func orderPrice(pizzas []string) int {
   // TODO
 }
+
+func main() {
+  total := orderPrice([]string{
+    "pepperoni", 
+    "mozzarella", 
+    "vege", 
+    "vege",
+  })
+
+  fmt.Println(total)
+}
+```
+
+---
+
+# Solution
+
+```go
+func orderPrice(pizzas []string) int {
+  price := 0
+
+  for _, pizza := range pizzas {
+    switch pizza {
+    case "pepperoni":
+      price += 6
+    case "mozzarella":
+      price += 5
+    case "vege":
+      price += 4
+    }
+  }
+
+  return price
+}
+
+...
+```
+
+---
+
+# Solution (continued)
+
+```go
+...
 
 func main() {
   total := orderPrice([]string{
