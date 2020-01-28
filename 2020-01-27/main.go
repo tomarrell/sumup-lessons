@@ -2,13 +2,34 @@ package main
 
 import "fmt"
 
+func derefString(str *string) string {
+	if str == nil {
+		return ""
+	}
+	return *str
+}
+
+func derefInt(val *int) int {
+	if val == nil {
+		return 0
+	}
+	return *val
+}
+
 func main() {
-	numOfBirds := 20
-	ptrNumOfBirds := &numOfBirds
+	fmt.Println(derefString(nil)) // ""
+	fmt.Println(derefInt(nil))    // 0
 
-	fmt.Println(*ptrNumOfBirds) // 20
+	var str string = "Something"
+	fmt.Println(derefString(&str)) // Something
 
-	numOfBirds = 10 // change the value of the variable
+	str = "another"
+	fmt.Println(derefString(&str)) // another
 
-	fmt.Println(*ptrNumOfBirds)
+	var anInt int = 10
+	fmt.Println(derefInt(&anInt)) // 10
+
+	anInt = 30
+	fmt.Println(derefInt(&anInt)) // 30
+
 }
