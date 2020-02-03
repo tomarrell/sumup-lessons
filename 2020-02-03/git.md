@@ -208,6 +208,8 @@ Create a new repository in the directory that you have stored the **previous les
 
 Once you've done that, create a new repository on Github, set this remote up within your local repository and push your changes.
 
+**Extra**: Create a new branch and create a file called `README.md`. Write a description of your new repository in the file. Push this new branch to Github, and open a pull-request against the **master** branch.
+
 ---
 
 *lesson 8, fin*
