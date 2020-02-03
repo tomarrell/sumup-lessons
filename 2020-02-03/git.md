@@ -1,6 +1,6 @@
 % Intro to Git
 % Tom Arrell
-% February 3rd
+% February 3
 
 ---
 
@@ -8,7 +8,7 @@
 
 Last week we covered pointers and interfaces. We looked at how a pointer type stores the address where the computer can find the value.
 
-We also looked at interfaces, and how they are special types which describe **functionality**, which are useful for making your programs more flexible.
+We also looked at interfaces, and how they are special types which describe **functionality** and are useful for making your programs more flexible.
 
 ---
 
@@ -21,6 +21,10 @@ We also looked at interfaces, and how they are special types which describe **fu
   - Terms
 - Creating a repository
 - GitHub
+- Remotes
+- Pushing
+- Branching
+- Challenge
 
 ---
 
@@ -46,7 +50,7 @@ Information about **when** changes were made is also stored. Through proper use,
 
 Git is used by >70 percent of developers.
 
-Git is distributed, meaning there is no single source of truth. However, we do use services which can host git repositories, like Github.
+Git is **distributed**, meaning there is *no single source of truth*. However, we do use services which can host git repositories, like Github.
 
 It allows us to propose changes in a structured manner. This makes development much easier when you have a large number of people contributing to the same set of files.
 
@@ -94,7 +98,7 @@ Let's create our first repository.
 
 # Github
 
-Github is a service which provides a place to store your Git repositories on the internet.
+**Github** is a service which provides a place to store your Git repositories on the internet.
 
 This means that you can have access to them from multiple computers. You don't *have* to use Github, but it is what we use here at SumUp. Alternatives exists, e.g. GitLab, Bitbucket.
 
@@ -104,9 +108,9 @@ They all do fundamentally the same thing, provide a remote (in the cloud) copy o
 
 # Github Signup
 
-If you haven't signed up to Github yet, you can choose to do this is you would like to follow along. 
+If you haven't signed up to Github yet, you can choose to do this is you would like to follow along.
 
-Go to 
+Go to
 
 > https://github.com/signup
 
@@ -122,6 +126,8 @@ Now we're going to create a remote version of our repository in order to have th
 1. Go to https://github.com/new
 2. Fill out your new repository's information
 3. Select whether you would like the repository to be public or private
+4. Click **Create repository**
+5. You will now see your empty Github repository
 :::
 
 ---
@@ -135,4 +141,77 @@ Once you have a remote repository, you want to configure your local repository t
 2. Run `git remote` to see a list of the currently configured "remotes". This should be empty.
 3. Run `git remote add origin [repo-url]` in order to add the new remote.
 4. Run `git push --set-upstram origin master` in order to configure your local master branch to track the origin's master branch.
+5. Run `git remote -v` in order to see your newly configured repository.
 :::
+
+---
+
+# Pushing Commits
+
+Now that you have a remote repository, each time you make a commit, you can push this commit to the remote (in this case Github), so that changes will be visible to anyone who has access to that remote repository.
+
+You can do this using the command:
+
+```bash
+git push
+```
+
+You may be prompted for the username and password for your Github account.
+
+---
+
+# Branching
+
+Branching allows you to have multiple parallel streams of work on the same repository.
+
+> e.g. Imagine Sally was building feature *X*, and John was building feature *Y* in the same repository. To prevent their commits from clashing, they commit to separate branches. When they're both done with their respective features, they **merge** into the master branch.
+
+The default branch in a repository goes by the name of **master**.
+
+---
+
+# Branching
+
+![branching](./branching.png)
+
+---
+
+# Creating a New Branch
+
+You can create a new branch from the currently checked out branch by using the command:
+
+```bash
+git branch [name]
+```
+
+Now you can checkout into your newly created branch.
+
+```bash
+git checkout [name]
+```
+
+Now when you run `git status`, you will see that you are now checked out into your new branch.
+
+---
+
+# Branches Continued
+
+Branches are isolated from one another, when you switch branches, all the files in the repository will be modified to reflect their state on that branch.
+
+e.g. If Sally makes changes to file *X* on her branch, they won't be visible to John on his branch unless he merges Sally's changes into his branch, using `git merge [branch]`.
+
+---
+
+# Challenge
+
+Create a new repository in the directory that you have stored the **previous lessons' challenges** and commit all the changes to **master**.
+
+Once you've done that, create a new repository on Github, set this remote up within your local repository and push your changes.
+
+---
+
+*lesson 8, fin*
+
+If you had any trouble, now is the time to ask for help!
+
+**Questions?**

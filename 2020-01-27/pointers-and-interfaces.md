@@ -176,3 +176,11 @@ func main() {
   speak(Snake{}) // Hiss
 }
 ```
+
+---
+
+*lesson 7, fin*
+
+If you had any trouble, now is the time to ask for help!
+
+**Questions?**
