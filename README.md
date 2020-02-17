@@ -14,6 +14,8 @@ Sessions are hosted every **Monday** from **6:15pm to 7:45pm** at SumUp, Gruners
 6. 2020-01-13 - Lesson 5: challenges [slides](./2020-01-13/out.pdf)
 7. 2020-01-20 - Lesson 6: maps & methods [slides](./2020-01-20/out.pdf)
 8. 2020-01-27 - Lesson 7: pointers & interfaces [slides](./2020-01-27/out.pdf)
+8. 2020-02-03 - Lesson 8: git [slides](./2020-02-03/out.pdf)
+8. 2020-02-17 - Lesson 9: switches and leetcode [slides](./2020-02-17/out.pdf)
 
 ### Useful links
 
